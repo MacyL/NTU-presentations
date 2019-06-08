@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+    <title>reveal-md</title>
+    <link rel="stylesheet" href="./css/reveal.css" />
+    <link rel="stylesheet" href="./css/theme/simple.css" id="theme" />
+    <link rel="stylesheet" href="./css/highlight/zenburn.css" />
+    <link rel="stylesheet" href="./css/print/paper.css" type="text/css" media="print" />
+    <link rel="stylesheet" href="./_assets/additional.css" />
+
+  </head>
+  <body>
+    <div class="navi">
+        <p id='intro'>INTRODUCTION</p>
+        <p id='methods'>METHODS</p>
+        <p id='workflows'>WORKFLOWS</p>
+        <p id='modeling'>MODELING</p>
+        <p id='outlook'>OUTLOOK</p>
+    </div>
+    <div class="reveal">
+      <div class="slides"><section  data-markdown><script type="text/template"><h4>Fundamentals of computer-assisted language comparison</h4>
+<p><img src='img/calc-yinyang.png' style="border: 0.1;border-color: white;width:25%"></img></p>
+
+<p style='font-size:30px; text-align:center;'>International Conference on Historical Linguistics #24</p>
+<p style='font-size:20px; text-align:center;'>2019.07.03</p></script></section><section ><section data-markdown><script type="text/template"><div class='intro'></div>
+
+<h3>Computer-based Linguistics<h3>
+
+<p>Tiago Tresoldi</p></script></section><section data-markdown><script type="text/template"><img src='http://lingulist.de/documents/talks/img/calc-project/calc-5.jpg' style='border:0px; width:80%'></img></script></section><section data-markdown><script type="text/template">
+<img src='http://lingulist.de/documents/talks/img/calc-project/calc-7.jpg' style='border:0px; width:80%'></img></script></section></section><section ><section data-markdown><script type="text/template"><div class='methods'></div>
+
+<h3>Methods and algorithms<h3>
+
+<p>Tiago Tresoldi</p>
+</script></section><section data-markdown><script type="text/template"><div class="fig-container" style="overflow:hidden;"
+        data-overflow-shown=true
+        data-file="http://lingpy.org/"
+        data-style="height: 600px; margin-top: -100px; width: 100%;">
+</div>
+</script></section></section><section ><section data-markdown><script type="text/template"><div class='workflows'></div>
+<h3>CALC workflows</h3>
+<p>Mei-Shin Wu</p></script></section><section data-markdown><script type="text/template"><h3>EDICTOR -- visualize and edit data</h3>
+
+<div class="fig-container" style="overflow:hidden;"
+        data-overflow-shown=true
+        data-file="http://edictor.digling.org/"
+        data-style="height: 600px; margin-top: -100px; width: 100%;">
+</div></script></section></section><section ><section data-markdown><script type="text/template"><div class='modeling'></div>
+
+<h3>Modeling and annotation</h3>
+<p>Nathanael E. Schweikhard</p>
+</script></section><section data-markdown><script type="text/template"><h3>Concepticon - unified concepts</h3>
+
+<div class="fig-container" style="overflow:hidden;"
+        data-overflow-shown=true
+        data-file="https://concepticon.clld.org/"
+        data-style="height: 620px; margin-top: -100px; width: 100%;"></script></section></section><section ><section data-markdown><script type="text/template"><div class='outlook'></div>
+<img src='img/outlook.png'></img>
+</script></section><section data-markdown><script type="text/template"><ul>
+  <li>Increasing the accuracy</li>
+  <li>More user-friendly</li>
+</ul>
+</script></section></section><section  data-markdown><script type="text/template"><div></div>
+<h3>Thank you for the attention!</h3>
+</script></section></div>
+
+      <footer id="footer">
+        <p>Tiago Tresoldi | Mei-Shin Wu | Nathanael E. Schweikhard</p>
+      </footer>
+    </div>
+
+    <script src="./lib/js/head.min.js"></script>
+    <script src="./js/reveal.js"></script>
+
+    <script>
+      function extend() {
+        var target = {};
+        for (var i = 0; i < arguments.length; i++) {
+          var source = arguments[i];
+          for (var key in source) {
+            if (source.hasOwnProperty(key)) {
+              target[key] = source[key];
+            }
+          }
+        }
+        return target;
+      }
+      // Optional libraries used to extend on reveal.js
+      var deps = [
+        { src: './lib/js/classList.js', condition: function() { return !document.body.classList; } },
+        { src: './plugin/markdown/marked.js', condition: function() { return !!document.querySelector('[data-markdown]'); } },
+        { src: './plugin/markdown/markdown.js', condition: function() { return !!document.querySelector('[data-markdown]'); } },
+        { src: './plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+        { src: './plugin/zoom-js/zoom.js', async: true },
+        { src: './plugin/notes/notes.js', async: true },
+        { src: './plugin/math/math.js', async: true },
+        { src: './plugin/reveald3/reveald3.js' }
+      ];
+      // default options to init reveal.js
+      var defaultOptions = {
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
+        transition: 'default', // none/fade/slide/convex/concave/zoom
+        dependencies: deps
+      };
+      // options from URL query string
+      var queryOptions = Reveal.getQueryHash() || {};
+      var options = extend(defaultOptions, {}, queryOptions);
+    </script>
+
+    <script src="./_assets/jquery.js"></script>
+    <script src="./_assets/additional.js"></script>
+
+    <script>
+      Reveal.initialize(options);
+    </script>
+
+  </body>
+
+</html>
