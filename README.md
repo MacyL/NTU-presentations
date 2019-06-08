@@ -15,3 +15,5 @@ This is a repository for presenting CALC group at National Taiwan University. Th
 - [ ] Presentation slides (upload to this repository as backup)
 - [ ] Handout (upload to this repository as backup)
 
+Notes : I prefer to send one abstract which includes all three talks. So please create an issue and **only indicate your idea, such as what you tools will mention briefly**. So it can help me organize my thoughts. I will upload this abstract as soon as possible and you guys can put more suggestions into it. 
+
