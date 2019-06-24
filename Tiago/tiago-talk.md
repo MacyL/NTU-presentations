@@ -1,25 +1,24 @@
 # Historical linguistics
 
-- HT is the scientific study of linguistic change and evolution
-  in time, in fields like dialectology, psycholinguistics,
-  and philosophy of language
+- HT is the general scientific study of linguistic change and evolution
+  in time
   
 - HT is frequently taken as a synonym for "comparative linguistics",
   or even for "Indo-European studies"
   
-- Laymen more familiar with family trees and proto-forms
+- Laymen are more familiar with family trees and proto-forms
   - English "water", from Proto-Germanic \*watōr, from PIE \*wódr̥
   - Mandarin 水 shuǐ, from Old Chinese \*lhuiʔ ("that which flows"),
     from Proto-Sino-Tibetan \*lwi(j) ("flow, stream")
 
-![img/city.png]
 ![img/indoeuropean.png]
+![img/city.png]
     
 # History of the comparative method
 
-- Philosophers in Europe and Asia have known for millenia that
-  - There are some similarities between languages that cannot
-    be explained by chance alone
+- Philosophers in Europe and Asia have debated for millenia how:
+  - Languages show similarities that cannot be explained
+    by chance alone
   - Languages change
 
 - As a branch of philology, historical linguistics was born as
@@ -28,23 +27,23 @@
     and the reconstructions of William Wotton (1713)
   - Religious missions, especially Jesuitic, e.g. Matteo Ricci and
     Xu Guangqi 徐光啓 (16th-17th century) and Lorenzo Hervás (1735-1809)
-
-- "Orientalism" as in William Jones' discourse to the Asiatic
-  Society (1786)
+  - "Orientalism" as in William Jones' discourse to the Asiatic
+    Society (1786)
 
 # Comparative method
 
-- Mental model of the stair to that of trees
+- Mental model of "stair" replaced by that of "tree"
 
 [images of scala natura and stemma]
 
 - Progressive influence of Darwin and biological analogies
-- German investment in "Indo-Germanic" studies, leading to the
+
+- German promotion of "Indo-Germanic" studies, leading to the
   Neogrammarian tenets including:
   - Regularity of sound changes
   - Immediate and total effect of sound changes
 
-# Comparative method
+# Traditional workflow
 
 - Collection of data
 - Identification of cognates
@@ -60,6 +59,7 @@
 
 - Statistical approaches have always been common, as in
   Sapir (1916)
+
 - Computational methods begin in the 1950s with lexicostatistics
   and glottochronology
   - Morris Swadesh
@@ -79,10 +79,10 @@
 [picture for gray and atkinson]
 [picture for sagart et al]
 
-[picture of splits tree]
 [picture of bayesian network]
+[picture of splits tree]
 
-# Projects
+# The landscape
 
 - WALS
 - Glottolog
@@ -95,11 +95,11 @@ gen1 - 跟 FOLLOW / 根 ROOT
 # Computer-Assisted Language Comparison
 
 - In the scenario of increasing digital data, open access,
-  and interdisciplinarity, the comparative method must expand
+  and interdisciplinarity, the comparative method must expand:
   - Not only major families, but also minority ones
-  - Not only small groups with closed data, but a global
+  - Not only small laboratories with closed data, but a global
     collaboration on "fair" data
-  - No "black-boxes", but results that help us understand
+  - Avoid "black-boxes", favoring results that help us understand
     human languages
   - Not only fascination with proto-forms, but collaboration
     with history, biology, psychology...
@@ -125,9 +125,7 @@ how can we align?
   | Kiranti           | - | t   | - | i  | -   |
   | rGyalrong (Daofu) | ɣ | r   | - | ə  | -   |
 
-a potential alignment
-
-##
+## Alignment methods
 
 Sequence alignment algorithms from bioinformatics such as
 Needleman-Wunsch and Smith-Waterman, implemented in LingPy
@@ -139,50 +137,62 @@ as described in List (2014).
 
 - A problem of partitioning/clustering based in the correspondence
 of alignment sites according to implied evolutionary models.
-  - Edit Distance
-    - Linguistic extensions (Dolgopolsky, SCA)
+  - *Edit Distance*
+    - *Linguistic extensions (Dolgopolsky, SCA)*
   - Flat clustering (hierarchical or graph-based)
-  - LexStat
+  - *LexStat*
   - Machine learning (PMI similarity, Support Vector Machines)
 
-## Edit distance
-  
-From Jieyang "tsui³¹" to Kiranti "ti", when already segmented and
-aligned,
+## Edit distance - I
+
+- Comparing Jieyang "tsui³¹" to Kiranti "ti", there are three
+changes over four alignment positions, thus a score of
+1.0 - (3/4) = 0.75.
 
   | Edits | Rule           | Alignment          |
   | 0     |                | ts  | u | i  | ³¹  |
   | 1     | Delete tone    | ts  | u | i  | -   |
   | 2     | Delete vowel   | ts  | - | i  | -   |
   | 3     | Change initial | t   | - | i  | -   |
-  
-Three changes, that normalized by length of the alignment give a score of
-1.0 - (3/4) = 0.75.
 
-Every difference is equal, so that Beijing "ʂuəi²¹⁴" to
-Guangzhou "søy³⁵" has a score of
-0.0 (the initial, the medial, the nucleus, the coda, and tone are different).
+## Edit distance -- II
 
-Word pairs are considered cognates if they score below a given value, which
-can be defined in term of the distribution of the pair scores among languages.
+- Two words are considered cognates if their edit distance score
+is above a given value (threshold), which can be decided from
+the distribution of pair scores.
 
-## Dolgo and other extensions
+- Serious limits in a na"ive approach: Beijing "ʂuəi²¹⁴" and
+Guangzhou "søy³⁵" have a score of 0.0
+  - The initial, the medial, the nucleus, the coda, and tone are different
 
-Early approaches solved this with sound classes, either based on
-articulatory features or common patterns of development of sound changes,
-where, for example, Beijing "ʂuəi²¹⁴" is 'S', 'Y', 'E', '0', '6' and
-Guangzhou "søy³⁵" is 'S', 'U', 'Y', '2'.
+## Extensions to edit distance
 
-sound class model with enhanced sound-class models
-(such as SCA, that incorpirates prosodic strings)
+- Early solutions compared not *sounds*, but *sound classes*
+  - In the SCA model, Beijing "ʂuəi²¹⁴" is "SYE06" and
+    Guangzhou "søy³⁵" is "SUY02".
+  - Classes can be based on articulatory features or global
+    patterns of sound change
+  - More advanced models involve additional information,
+    such as SCA which incorporates prosodic strings
 
 ## LexStat
 
-LexStat, which
-uses a permutation method to compute individual segmental similarities
-fed to an alignment algorithm (thus allowing an instructed alignment)
+- LexStat is an advanced method that emulates the reasoning
+  behind human judgement for cognacy
+  
+- The method involves multiple *permutations* that allow to
+  compute individual segment similarities
+  - The expected similarities allow a specific and instructed
+    alignment, whose score is used for cognacy judgment
 
 ## Correspondences
 
-Network method
-Mattis paper
+- New network approach for the inference of sound correspondence
+  patterns across multiple languages
+
+- Columns in aligned cognate sets are the nodes, the compatibility
+  between nodes are the edge weights
+  - Compatible correspondence sets are detected by
+    "minimum clique cover problem"
+
+[image from Mattis' paper]
