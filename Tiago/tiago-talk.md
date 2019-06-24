@@ -1,91 +1,120 @@
 # Historical linguistics
 
-- Historical linguistics is the scientific study of linguistic change and
-evolution in time. It can take many forms:
-
-  - comparative linguistics
-  - dialectology and sociolinguistics
-  - phonology and psycholinguistic
-  - philology and philosophy of language
-
-- Frequently assumed to be only the comparative method, or even only
-Indo-European studies
-
-- Fascination with the proto-forms
-  - English "water" comes from Proto-Germanic \*watōr, from PIE \*wódr̥
-  - Mandarin 水 shuǐ comes from Old Chinese \*lhuiʔ ("that which flows"),
+- HT is the scientific study of linguistic change and evolution
+  in time, in fields like dialectology, psycholinguistics,
+  and philosophy of language
+  
+- HT is frequently taken as a synonym for "comparative linguistics",
+  or even for "Indo-European studies"
+  
+- Laymen more familiar with family trees and proto-forms
+  - English "water", from Proto-Germanic \*watōr, from PIE \*wódr̥
+  - Mandarin 水 shuǐ, from Old Chinese \*lhuiʔ ("that which flows"),
     from Proto-Sino-Tibetan \*lwi(j) ("flow, stream")
 
-# Splits tree
-
-# Bayesian network
-
+![img/city.png]
+![img/indoeuropean.png]
+    
 # History of the comparative method
 
-- Classical though in Europe and Asia recognized long ago that
-  - Different languages had similiaries that could not be explained by chance
-    alone
-  - Language, as shown by written records, change
-- As a part of philology, historical linguistics is born as a "hot"
-  science in the 17th century
-  - Colonial enterprises, e.g. Van Boxhorn (1612-1653) and William Wotton
-    reconstructions (1713)
-  - Religious missions, especially from Jesuits, e.g. Matteo Ricci and
+- Philosophers in Europe and Asia have known for millenia that
+  - There are some similarities between languages that cannot
+    be explained by chance alone
+  - Languages change
+
+- As a branch of philology, historical linguistics was born as
+  a "hot" science in the 17th century
+  - Colonial enterprises, e.g. the analyses of Van Boxhorn (1612-1653)
+    and the reconstructions of William Wotton (1713)
+  - Religious missions, especially Jesuitic, e.g. Matteo Ricci and
     Xu Guangqi 徐光啓 (16th-17th century) and Lorenzo Hervás (1735-1809)
-- "Orientalism" as in the case of William Jones' discourse to the Asiatic
+
+- "Orientalism" as in William Jones' discourse to the Asiatic
   Society (1786)
 
-# Trees
+# Comparative method
 
-Moving to scales to trees
+- Mental model of the stair to that of trees
+
+[images of scala natura and stemma]
+
+- Progressive influence of Darwin and biological analogies
+- German investment in "Indo-Germanic" studies, leading to the
+  Neogrammarian tenets including:
+  - Regularity of sound changes
+  - Immediate and total effect of sound changes
 
 # Comparative method
 
-- Heavy investment in German on the "indo-germanic" studies
-- Influence of Darwin
-- Neogrammarian "tenets"
-  - We don't observe the language, but its surface
-  - The sequences of sounds ("words") are the most essential of a language
-    and indepent of morphology, syntax, semantics, etc.
-  - Sound changes are regular, and if not regular can be explained by other
-    regular processes like analogy
-  - Sound changes are immediate
+- Collection of data
+- Identification of cognates
+- Study of correspondences
+- Reconstruction of sound changes
+- Analysis of typology
+- Correction of errors and repetition
 
-# Comparative method
-
-- Data collection
-- Cognate identification
-- Correspondence study
-- Form reconstruction by means of sound changes
-- Typological analysis
-- Repeat
+[image for false cognates]
+[other images?]
 
 # Quantitative turn
 
-- Statistics have been used since the beginning, such as in Sapir (1916)
-- Computational methods begin with lexicostatistics and glottochronology
-  in the 1950s
-  - Morris Swadesh and his lists
+- Statistical approaches have always been common, as in
+  Sapir (1916)
+- Computational methods begin in the 1950s with lexicostatistics
+  and glottochronology
+  - Morris Swadesh
   - Joseph Greenberg
   - Sergei Starostin and the Moscow School
 
 # Cladistics and phylogenetics
 
-- "Computational Phylogenetics in Historical Linguistics" by Donald Ringe
-  in the early 1990s
-- Media coverage with Gray & Atkison (2003)
-  - Heavy reaction by traditional comparatists
-  - Progressively more phylogenetic analyses are being published
+- Computational phylogenetic approaches begin in the early 1990s
+  with works such as Donald Ringe
 
-# Methods
+- Impressive media coverage for Gray & Atkinson (2003)
+  - Initial opposition by many traditional practitioners
+  - Progressively more philogenetic analyses are being published,
+    such as Sagart et al. (2019)
 
-- Alignment
+[picture for gray and atkinson]
+[picture for sagart et al]
 
-Align cognates for 水 such as Hakha "tîi", Bunan "tɕʰu",
+[picture of splits tree]
+[picture of bayesian network]
+
+# Projects
+
+- WALS
+- Glottolog
+- Concepticon
+- CLICS
+
+ba1 - 八 EIGHT / 疤 SCAR
+gen1 - 跟 FOLLOW / 根 ROOT
+
+# Computer-Assisted Language Comparison
+
+- In the scenario of increasing digital data, open access,
+  and interdisciplinarity, the comparative method must expand
+  - Not only major families, but also minority ones
+  - Not only small groups with closed data, but a global
+    collaboration on "fair" data
+  - No "black-boxes", but results that help us understand
+    human languages
+  - Not only fascination with proto-forms, but collaboration
+    with history, biology, psychology...
+
+- Methods: alignment, cognate detection, correspondence detection
+- Tools: lingpy, edictor
+    
+# Alignment
+
+Given cognates for 水 such as Hakha "tîi", Bunan "tɕʰu",
 Burmish (Rangoon) "je²²", Beijing "ʂuəi²¹⁴", Guangzhou "søy³⁵",
-Jieyang "tsui³¹", Kiranti "ti", rGyalrong (Daofu) "ɣrə".
+Jieyang "tsui³¹", Kiranti "ti", rGyalrong (Daofu) "ɣrə",
+how can we align?
 
-  | Language          | Alignments                 |
+  | Language          | Alignments             |
   |-------------------|---|-----|---|----|-----|
   | Hakha             | - | t   | - | iː | -   |
   | Bunan             | - | tɕʰ | - | u  | -   |
@@ -98,16 +127,25 @@ Jieyang "tsui³¹", Kiranti "ti", rGyalrong (Daofu) "ɣrə".
 
 a potential alignment
 
+##
+
 Sequence alignment algorithms from bioinformatics such as
-Needleman-Wunsch and Smith-Waterman, as implemented in LingPy.
+Needleman-Wunsch and Smith-Waterman, implemented in LingPy
+as described in List (2014).
 
+![img/nw.png]
 
-- Cognate detection
+# Cognate detection
 
-Cognate detection is a partitioning (i.e., clustering) task which does
-not necessarily assume internal hierarchy.
+- A problem of partitioning/clustering based in the correspondence
+of alignment sites according to implied evolutionary models.
+  - Edit Distance
+    - Linguistic extensions (Dolgopolsky, SCA)
+  - Flat clustering (hierarchical or graph-based)
+  - LexStat
+  - Machine learning (PMI similarity, Support Vector Machines)
 
-  - Edit distance
+## Edit distance
   
 From Jieyang "tsui³¹" to Kiranti "ti", when already segmented and
 aligned,
@@ -128,37 +166,23 @@ Guangzhou "søy³⁵" has a score of
 Word pairs are considered cognates if they score below a given value, which
 can be defined in term of the distribution of the pair scores among languages.
 
-- Dolgo
+## Dolgo and other extensions
 
 Early approaches solved this with sound classes, either based on
 articulatory features or common patterns of development of sound changes,
 where, for example, Beijing "ʂuəi²¹⁴" is 'S', 'Y', 'E', '0', '6' and
 Guangzhou "søy³⁵" is 'S', 'U', 'Y', '2'.
 
-Alternatives, mostly inspired from biology, flat clustering algorithm:
-either hierarchical clustering or graph-based. Linguistic extensions
-develop on the sound class model with enhanced sound-class models
-(such as SCA, that incorpirates prosodic strings), and LexStat, which
-uses a permutation method to compute individual segmental similarities
-fed to an alignment algorithm (thus allowing an instructed alignment),
-to PMI similarity approach or Support Vector Machines.
+sound class model with enhanced sound-class models
+(such as SCA, that incorpirates prosodic strings)
 
-- Correspondences
+## LexStat
+
+LexStat, which
+uses a permutation method to compute individual segmental similarities
+fed to an alignment algorithm (thus allowing an instructed alignment)
+
+## Correspondences
 
 Network method
 Mattis paper
-
-# Projects
-
-- WALS
-- Glottolog
-- Concepticon
-- CLICS
-
-ba1 - 八 EIGHT / 疤 SCAR
-gen1 - 跟 FOLLOW / 根 ROOT
-
-# needs
-
-good data
-allows more stuff
