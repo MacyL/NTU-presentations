@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="./css/highlight/zenburn.css" />
     <link rel="stylesheet" href="./css/print/paper.css" type="text/css" media="print" />
     <link rel="stylesheet" href="./_assets/additional.css" />
+    <link rel="stylesheet" href="./_assets/spreadsheet.css" />
 
   </head>
   <body>
@@ -42,13 +43,235 @@
 </div>
 </script></section></section><section ><section data-markdown><script type="text/template"><div class='workflows'></div>
 <h3>CALC workflows</h3>
-<p>Mei-Shin Wu</p></script></section><section data-markdown><script type="text/template"><h3>EDICTOR -- visualize and edit data</h3>
-
+<p>Mei-Shin Wu</p></script></section><section data-markdown><script type="text/template"><p style='text-font:25px'>The Gap Between Computational and Traditional Historical Linguistics</p>
 <div class="fig-container" style="overflow:hidden;"
         data-overflow-shown=true
-        data-file="http://edictor.digling.org/"
-        data-style="height: 600px; margin-top: -100px; width: 100%;">
-</div></script></section></section><section ><section data-markdown><script type="text/template"><div class='modeling'></div>
+        data-file="http://lingulist.de/documents/talks/img/ba-talk/background-11.jpg"
+        data-style="height: 550px; margin-top: -100px; width: 100%;">
+</div>
+<aside class="notes"><p>The comparative method has been applied to many other language
+families.</p>
+</aside></script></section><section data-markdown><script type="text/template"><p style='text-font:25px'>The Gap Between Computational and Traditional Historical Linguistics</p>
+<div class="fig-container" style="overflow:hidden;"
+        data-overflow-shown=true
+        data-file="http://lingulist.de/documents/talks/img/ba-talk/background-12.jpg"
+        data-style="height: 550px; margin-top: -100px; width: 100%;">
+</div>
+<aside class="notes"><p>But our knowledge of the history of most of these
+language families is still rather fuzzy. Especially, some language families in South East Asia, like Sino-Tibetan, Hmong-Mien and Tai-Kadai language families. As language data accumulated through time, comparative methods have reached its practical limits. In the situation where linguists cannot digest the large amount of data, but the computer approach cannot yield high accuracy results, it is time to consider a new framework.</p>
+</aside></script></section><section data-markdown><script type="text/template"><h3>A computer-assisted approach</h3>
+
+<p>To allow humans and machines to work together successfully, it is important that:</p>
+<ul style='text-align:left;'>
+    <li> our data is both human- and machine-readable, </li>
+    <li> we follow transparent guidelines when handling linguistic datasets, </li>
+    <li>we offer interfaces that allow humans and machines to access the data at the same time. </li>
+</ul>
+
+<aside class="notes"><p>A computer-assisted strategy has been integrated in many scientific fields. We adapted the idea and develop the computer-assisted framework in historical linguistics. The basic idea behind <b>computer-assisted</b> as opposed to <b>computer-based</b> language comparison is to allow scholars to do qualitative and quantitative research at the same time. By combining the efforts from experts and computing power, we can get the best of two worlds, the efficiency of computers, and the accuracy of humans.</p>
+</aside></script></section><section data-markdown><script type="text/template"><h3>CALC workflow</h3>
+<img src='img/HillList.png'></img>
+
+<aside class="notes"><p>Our workflows for computer-assisted language
+comparison have so far been intensively tested on a
+small set of 8 Burmish languages, which we
+investigated in collaboration with Nathan Hill, who
+was responsible for the qualitative investigation of
+the data and for the common discussion of new
+computer-assisted methods which were then
+implemented by Mattis List.</p>
+<p>Our experience with this Burmish project allows us to
+set up this workflow that starts from raw data to the
+explicit identification of correspondence patterns
+across multiple languages. At the moment, List and
+Hill develop the workflow further to account also for
+(semi)-automatic reconstructions, but in this talk, only
+the identification of correspondence patterns will be
+discussed.</p>
+</aside></script></section><section data-markdown><script type="text/template"><h3>Details of the workflows</h3>
+<p style="text-align:center">
+<img src="img/calc-workflow.png" alt="img" style='border:0px'></img>
+</p>
+
+<aside class="notes"><p>This picture presents the full workflow, it comprises 5
+different processes at this moment, in which we
+successively lift linguistic data from their raw form
+up to a level where correspondence patterns across
+cognate words have been automatically identified and
+can be qualitatively inspected by the scholars.
+Some technical terms on this picture may look
+unfamiliar to you, but the ideas behind these
+applications are actually being practiced by linguists
+for quite some time already. In the following, we will
+discuss these ideas in detail, and you find even more
+detailed information in the handout accompanying
+this talk.</p>
+</aside></script></section><section data-markdown><script type="text/template"><p stlye='30px'>Materials and methods</p>
+
+<img src='img/languages.png' style='border:0px;width:60%;'></img>
+
+<ul >
+<li style='font-size:60%'> Chén 陳其光 (2012). Miao and Yao language. 苗瑤语文</li>
+<li style='font-size:60%'> 25 Hmong-Mien languages in the original (10 in our selection)</li>
+<li style='font-size:60%'> 885 concepts in the original (313 in our selection, compatible with the Burmish Etymological dictionary project)</li>
+</ul>
+
+<aside class="notes"><p>The data we use to illustrate our workflow was
+originally collected by 陳其光, and later added in
+digital form to the Wiktionary project.
+Chén&#39;s collection of <b>frequent terms</b> comprises 885
+different concepts translated into 25 varieties of
+Hmong-Mien. In this talk, we extract 10 Hmong-Mien
+languages for the demonstration, and the map here
+presents the geographical locations of these
+languages.</p>
+</aside></script></section><section data-markdown><script type="text/template"><h3>From raw data to machine-readable data</h3>
+<p style='text-align:center'>
+<img src="img/raw-machine.png" style="width:700px;border:0px" alt="img"></img>
+</p>
+
+<aside class="notes"><p>The first step is to convert raw data to a machine
+readable format. I will try to explain in detail, what
+this means.</p>
+</aside></script></section><section data-markdown><script type="text/template"><p stlye='30px'>From raw data to machine-readable data</p>
+<img src="img/chen-illustration.png" style="width:800px;border:0px" alt="img"></img>
+
+<aside class="notes"><p>To see in detail, what this means, let’s have a look at
+one exemplary page from Chén’s book, with the data,
+as it has been prepared by the SEALANG project.
+We can see that the data is essentially the same, but
+that the rows and columns of the tabular form have
+been swapped.</p>
+</aside></script></section><section data-markdown><script type="text/template"><p stlye='30px'>From raw data to machine-readable data</p>
+
+<div class="spreadsheet" data-delimiter="\t" data-width="100" fontsize="12">
+     \t Baheng,east \t Baheng, west \t Qiandong, east \t Qiandong, wesst
+七   \t  tsha³¹,tsjung⁴⁴ \t tshang⁴⁴    \t     shung⁵³    \t      shung²²
+月亮 \t la⁰³lha⁵⁵ \t ʔa⁰³lha⁵⁵ \t la⁴⁴la⁴⁴ \t pau¹¹la³³
+星星 \t la⁰³qang³⁵ \t qa⁰³qang³⁵ \t qei²⁴qei²⁴ \t tei⁴⁴qei⁴⁴
+</div>
+
+<aside class="notes"><p>The problem of this type of data is that it is difficult to
+interpret for a computer. This is because it contradicts
+one fundamental principle of data organization: one
+cell in a table should have only one kind of value.
+But in the tables in Chen’s data, we can often see
+multiple values in a cell, and often they are there to
+indicate that a language has two or more expressions
+for the same concept. They then separate these
+synonyms by some character, a comma, a colon, a dot,
+or a pipe. <b>(action)</b> This may look okay for humans, but
+it will confuse any computer method, as the method
+cannot guess what the human wants to say here.</p>
+<p>(action is to type , ; and | in the cell)</p>
+</aside></script></section><section data-markdown><script type="text/template"><div class="spreadsheet" data-delimiter="\t" data-width="60">
+ ID \t DOCULECT        \t CONCEPT \t ENGLISH \t VALUE         \t FORM \t TOKENS \t NOTE
+ 1  \t Baheng, east    \t 七      \t SEVEN   \t tsja³¹,tsjung⁴⁴ \t tsja³¹     \t        \t
+ 2  \t Baheng, east    \t 七      \t SEVEN   \t tsja³¹,tsjung⁴⁴ \t tsjung⁴⁴    \t        \t variant
+ 2  \t Baheng, west    \t 七      \t SEVEN   \t tsjang⁴⁴      \t tsjang⁴⁴      \t        \t
+ 3  \t Qiandong, east  \t 七      \t SEVEN   \t sjung⁵³       \t sjung⁵³       \t        \t
+ 4  \t Qiandong, wesst \t 七      \t SEVEN   \t sjung²²       \t sjung²²       \t        \t
+ 5  \t Baheng, east    \t 月亮    \t MOON    \t la⁰³lha⁵⁵     \t la⁰³lha⁵⁵     \t        \t
+ 6  \t Baheng, west    \t 月亮    \t MOON    \t ʔa⁰³lha⁵⁵     \t ʔa⁰³lha⁵⁵     \t        \t
+ 7  \t Qiandong, east  \t 月亮    \t MOON    \t la⁴⁴la⁴⁴      \t la⁴⁴la⁴⁴      \t        \t
+ 8  \t Qiandong, wesst \t 月亮    \t MOON    \t pau¹¹la³³     \t pau¹¹la³³     \t        \t
+ 9  \t Baheng, east    \t 星星    \t STAR    \t la⁰³qang³⁵    \t la⁰³qang³⁵    \t        \t
+ 10 \t Baheng, west    \t 星星    \t STAR    \t qa⁰³qang³⁵    \t qa⁰³qang³⁵    \t        \t
+ 11 \t Qiandong, east  \t 星星    \t STAR    \t qei²⁴qei²⁴    \t qei²⁴qei²⁴    \t        \t
+ 12 \t Qiandong, wesst \t 星星    \t STAR    \t tei⁴⁴qei⁴⁴    \t tei⁴⁴qei⁴⁴    \t        \t
+</div>
+
+<aside class="notes"><p>We transform the wide format to a so-called longtable
+format, which looks redundant at first sight, but
+is the most easy-to-make way to provide data that is
+machine-readable.
+Each entry in this format consists of a unique id, a
+language name (Doculect), a concept identifier (if it’s
+not English then you can translate it into English), and
+a value. The value is the original entry we find in the
+source. This value is then further split, if it contains a
+comma, and we add the other entry to the FORM
+column. In this way, we can consistently handle
+synonyms, but also keep track of the original data.</p>
+<p>Now, the form is not yet computer-readable. Linguists
+would not simply compare the word forms, but
+computers don’t know what one sound is, and how the
+sounds should be interpreted.
+For this reason, we have to segment the data for the
+computer, so the methods know which symbols form
+one sound. We do this by adding spaces.
+The most straightforward way is to segment by hand.
+(action) But if we are dealing with hundreds of entries, it is
+better to do this automatically.
+(action is to type : )
+tsja³¹ → tɕ (U+0255)a ³(U+00b3)¹(U+00b9) → tɕ a ³¹</p>
+<p>⁵ (U+2075)
+⁴ (U+2074)</p>
+</aside></script></section><section data-markdown><script type="text/template"><p stlye='30px'>From raw data to machine-readable data</p>
+
+We recommend <i>Orthography Profiles</i> as a way to:
+
+<ul>
+<li> Convert arbitrary input data to IPA: </li>
+  <ul style="list-style-type:none;">
+    <li> tsj   ---->  tɕ </li>
+    <li> ng    ---->   ŋ </li>
+  </ul>
+<li>And to segment the input data:</li>
+   <ul style="list-style-type:none;">
+      <li> tsja³¹  ----> tɕa³¹ ----> tɕ  a ³¹<li>
+   </ul>
+</ul>
+
+<aside class="notes"><p>We recommend to use Orthography Profiles to
+convert all kinds of transcriptions to consistent IPA
+and segment the data at the same time.</p>
+</aside></script></section><section data-markdown><script type="text/template"><p stlye='30px'>From raw data to machine-readable data</p>
+
+<div class="spreadsheet" data-delimiter="\t" data-width="60">
+Grapheme \t IPA
+č        \t tʃ
+ž        \t dʒ
+th       \t tʰ
+dh       \t d̤
+sh       \t ʃ
+a        \t a
+aa       \t aː
+tsj	 \t tɕ
+la	 \t l a
+</div>
+
+<aside class="notes"><p>An orthography profile is nothing else than a table, in
+which you list the combination of characters in the
+original transcription in the first column, and how it
+should be converted in a second column.</p>
+</aside></script></section><section data-markdown><script type="text/template"><div class="spreadsheet" data-delimiter="\t" data-width="100" fontsize="12">
+ID  \t DOCULECT        \t CONCEPT \t ENGLISH \t VALUE           \t FORM       \t TOKENS              \t COGIDS
+ 1  \t Baheng, east    \t 七      \t SEVEN   \t tsja³¹,tsjung⁴⁴ \t tsja³¹     \t tɕ a ³¹             \t
+ 2  \t Baheng, east    \t 七      \t SEVEN   \t tsja³¹,tsjung⁴⁴ \t tsjung⁴⁴   \t tɕ u ŋ ⁴⁴           \t
+ 3  \t Baheng, west    \t 七      \t SEVEN   \t tsjang⁴⁴        \t tsjang⁴⁴   \t tɕ a ŋ ⁴⁴           \t
+ 4  \t Qiandong, east  \t 七      \t SEVEN   \t sjung⁵³         \t sjung⁵³    \t ɕ u ŋ ⁵³            \t
+ 5  \t Qiandong, wesst \t 七      \t SEVEN   \t sjung²²         \t sjung²²    \t ɕ u ŋ ²²            \t
+ 6  \t Baheng, east    \t 月亮    \t MOON    \t la⁰³lha⁵⁵       \t la⁰³lha⁵⁵  \t l a ³/⁰ + ɬ a ⁵⁵    \t
+ 7  \t Baheng, west    \t 月亮    \t MOON    \t ʔa⁰³lha⁵⁵       \t ʔa⁰³lha⁵⁵  \t ʔ a ³/⁰ + ɬ a ⁵⁵    \t
+ 8  \t Qiandong, east  \t 月亮    \t MOON    \t la⁴⁴la⁴⁴        \t la⁴⁴la⁴⁴   \t l a ⁴⁴ + l a ⁴⁴     \t
+ 9  \t Qiandong, wesst \t 月亮    \t MOON    \t pau¹¹la³³       \t pau¹¹la³³  \t p ɔ ¹¹ + l a ³³     \t
+ 10 \t Baheng, east    \t 星星    \t STAR    \t la⁰³qang³⁵      \t la⁰³qang³⁵ \t l a ³/⁰ + q a ŋ ³⁵  \t
+ 11 \t Baheng, west    \t 星星    \t STAR    \t qa⁰³qang³⁵      \t qa⁰³qang³⁵ \t q a ³/⁰ + q a ŋ ³⁵  \t
+ 12 \t Qiandong, east  \t 星星    \t STAR    \t qei²⁴qei²⁴      \t qei²⁴qei²⁴ \t q ei ²⁴ + q ei  ²⁴  \t
+ 13 \t Qiandong, wesst \t 星星    \t STAR    \t tei⁴⁴qei⁴⁴      \t tei⁴⁴qei⁴⁴ \t t ei - ⁴⁴ + q ei ⁴⁴ \t
+</div>
+
+<aside class="notes"><p>And once we applied the profile, our data looks like
+this. Note that the plus-sign here indicates, that the
+word consists of two morphemes.</p>
+</aside></script></section><section data-markdown><script type="text/template"><p style='text-align:center'>
+<img src="img/machine-partial.png" style="width:800px" alt="img"></img>
+</p>
+
+<aside class="notes"><p>Now, we come to the second stage, in which we try to
+infer partial cognates from our segmented words.</p>
+</aside></script></section></section><section ><section data-markdown><script type="text/template"><div class='modeling'></div>
 
 <h3>Modeling and annotation</h3>
 <p>Nathanael E. Schweikhard</p>
@@ -97,7 +320,8 @@
         { src: './plugin/zoom-js/zoom.js', async: true },
         { src: './plugin/notes/notes.js', async: true },
         { src: './plugin/math/math.js', async: true },
-        { src: './plugin/reveald3/reveald3.js' }
+        { src: './plugin/reveald3/reveald3.js' },
+        { src: './plugin/spreadsheet/spreadsheet.js'}
       ];
       // default options to init reveal.js
       var defaultOptions = {
@@ -115,6 +339,7 @@
 
     <script src="./_assets/jquery.js"></script>
     <script src="./_assets/additional.js"></script>
+    <script src="./_assets/ruleJS.all.full.min.js"></script>
 
     <script>
       Reveal.initialize(options);
