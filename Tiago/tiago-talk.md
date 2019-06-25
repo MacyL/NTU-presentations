@@ -2,10 +2,10 @@
 
 - HT is the general scientific study of linguistic change and evolution
   in time
-  
+
 - HT is frequently taken as a synonym for "comparative linguistics",
   or even for "Indo-European studies"
-  
+
 - Laymen are more familiar with family trees and proto-forms
   - English "water", from Proto-Germanic \*watōr, from PIE \*wódr̥
   - Mandarin 水 shuǐ, from Old Chinese \*lhuiʔ ("that which flows"),
@@ -13,7 +13,7 @@
 
 ![img/indoeuropean.png]
 ![img/city.png]
-    
+
 # History of the comparative method
 
 - Philosophers in Europe and Asia have debated for millenia how:
@@ -80,16 +80,6 @@
 ![img/bayesian.png]
 ![img/splitstree.png]
 
-# The landscape
-
-- WALS
-- Glottolog
-- Concepticon
-- CLICS
-
-ba1 - 八 EIGHT / 疤 SCAR
-gen1 - 跟 FOLLOW / 根 ROOT
-
 # Computer-Assisted Language Comparison
 
 - In the scenario of increasing digital data, open access,
@@ -103,8 +93,16 @@ gen1 - 跟 FOLLOW / 根 ROOT
     with history, biology, psychology...
 
 - Methods: alignment, cognate detection, correspondence detection
-- Tools: lingpy, edictor
-    
+- Tools: LingPy, edictor
+
+# LingPy
+
+- Programming library for historical linguistics, state of the art:
+  - multiple phonetic alignment: 98% (pair score, List, 2014)
+  - automatic cognate detection: 89% (B-Cubed scores, List et al., 2017)
+  - phylogenetic reconstruction: 0.08 (Gen. Quart. Dist, Rama et al., 2018)
+  - correspondence pattern identification: NP-hard (no human attempts, List, 2019)
+
 # Alignment
 
 Given cognates for 水 such as Hakha "tîi", Bunan "tɕʰu",
@@ -177,7 +175,7 @@ Guangzhou "søy³⁵" have a score of 0.0
 
 - LexStat is an advanced method that emulates the reasoning
   behind human judgement for cognacy
-  
+
 - The method involves multiple *permutations* that allow to
   compute individual segment similarities
   - The expected similarities allow a specific and instructed
