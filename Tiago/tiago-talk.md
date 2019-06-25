@@ -34,7 +34,8 @@
 
 - Mental model of "stair" replaced by that of "tree"
 
-[images of scala natura and stemma]
+![img/scalanaturae.jpg]
+![img/tree.gif]
 
 - Progressive influence of Darwin and biological analogies
 
@@ -52,8 +53,7 @@
 - Analysis of typology
 - Correction of errors and repetition
 
-[image for false cognates]
-[other images?]
+![img/false_cognates.jpg]
 
 # Quantitative turn
 
@@ -76,11 +76,9 @@
   - Progressively more philogenetic analyses are being published,
     such as Sagart et al. (2019)
 
-[picture for gray and atkinson]
-[picture for sagart et al]
-
-[picture of bayesian network]
-[picture of splits tree]
+![img/austronesian.jpg]
+![img/bayesian.png]
+![img/splitstree.png]
 
 # The landscape
 
@@ -195,4 +193,4 @@ Guangzhou "søy³⁵" have a score of 0.0
   - Compatible correspondence sets are detected by
     "minimum clique cover problem"
 
-[image from Mattis' paper]
+![ims/correspondences.png]
