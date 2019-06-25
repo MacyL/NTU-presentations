@@ -228,7 +228,7 @@ convert all kinds of transcriptions to consistent IPA
 and segment the data at the same time.</p>
 </aside></script></section><section data-markdown><script type="text/template"><p stlye='30px'>From raw data to machine-readable data</p>
 
-<div class="spreadsheet" data-delimiter="\t" data-width="60">
+<div class="spreadsheet" data-delimiter="\t" data-width="80">
 Grapheme \t IPA
 č        \t tʃ
 ž        \t dʒ
@@ -245,7 +245,8 @@ la	 \t l a
 which you list the combination of characters in the
 original transcription in the first column, and how it
 should be converted in a second column.</p>
-</aside></script></section><section data-markdown><script type="text/template"><div class="spreadsheet" data-delimiter="\t" data-width="100" fontsize="12">
+</aside></script></section><section data-markdown><script type="text/template"><p stlye='30px'>From raw data to machine-readable data</p>
+<div class="spreadsheet" data-delimiter="\t" data-width="100" data-fontsize="13">
 ID  \t DOCULECT        \t CONCEPT \t ENGLISH \t VALUE           \t FORM       \t TOKENS              \t COGIDS
  1  \t Baheng, east    \t 七      \t SEVEN   \t tsja³¹,tsjung⁴⁴ \t tsja³¹     \t tɕ a ³¹             \t
  2  \t Baheng, east    \t 七      \t SEVEN   \t tsja³¹,tsjung⁴⁴ \t tsjung⁴⁴   \t tɕ u ŋ ⁴⁴           \t
@@ -265,13 +266,329 @@ ID  \t DOCULECT        \t CONCEPT \t ENGLISH \t VALUE           \t FORM       \t
 <aside class="notes"><p>And once we applied the profile, our data looks like
 this. Note that the plus-sign here indicates, that the
 word consists of two morphemes.</p>
-</aside></script></section><section data-markdown><script type="text/template"><p style='text-align:center'>
-<img src="img/machine-partial.png" style="width:800px" alt="img"></img>
+</aside></script></section><section data-markdown><script type="text/template"><h3>From segmented words to computer-inferred cognates</h3>
+<p style='text-align:center'>
+<img src="img/machine-partial.png" style="width:800px;border:0px" alt="img"></img>
 </p>
 
 <aside class="notes"><p>Now, we come to the second stage, in which we try to
 infer partial cognates from our segmented words.</p>
-</aside></script></section></section><section ><section data-markdown><script type="text/template"><div class='modeling'></div>
+</aside></script></section><section data-markdown><script type="text/template"><p stlye='30px'>From segmented words to computer-inferred cognates</p>
+
+<p style='text-align:center'>
+<img src="img/partialcg.png" style="width:800px" alt="img"></img>
+</p>
+
+<aside class="notes"><p>Compounding is an important element of word
+formation in South-East Asian languages. The
+presence of compound words challenges the notion
+that words can either be cognate or not. This picture
+shows an example of words for “moon” in 4 Sinitic
+languages, the words that should be cognates are
+marked in the same color. For example, ŋuoʔ5, ŋiat5,
+ȵy21, yɛ51 are all cognate with each other. But
+Meixian has another morpheme which means “light”
+in Mandarin Chinese, and Wenzhou has two
+morphemes kuɔ35 vai13 after the moon morpheme.
+If we allow words only to be cognate or not, we
+probably should say that we have four different
+cognates here.
+To account for partial cognates in our data, we use a
+different annotation schema. In this schema, we assign
+each morpheme a cognate ID, and if two morphemes
+have the same ID, they are thus meant to be cognate.</p>
+</aside></script></section><section data-markdown><script type="text/template"><p style='font-size:30px'>From segmented words to computer-inferred cognates</p>
+
+<div class="fig-container" style="overflow:hidden;"
+        data-overflow-shown=true
+        data-file="http://lingulist.de/documents/talks/img/calc-project/algo2.jpg"
+        data-style="height: 310px; margin-top: -20px; width: 80%;">
+</div>
+
+<p style='text-align:left;font-size:60%;'>List et al. (2016). Using sequence similarity networks to identify partial cognates in multilingual wordlists. In Proceedings of the 54th Annual Meeting of the Association for Computational Linguistics (Vol. 2, pp. 599-605).</p>
+
+<aside class="notes"><p>With the method by Mattis List et al., proposed in
+2016, we have a rather simple and efficient approach
+to automatically search for cognates in linguistic
+datasets.
+Although the algorithm is not very complex, it would
+go too far to explain the details here, I am afraid, and
+therefore, I will only show this nice graph, that
+illustrates the different stages, and tell you that the
+core idea is to model the data with help of networks.</p>
+</aside></script></section><section data-markdown><script type="text/template"><p stlye='30px'>From segmented words to computer-inferred cognates</p>
+
+<div class="spreadsheet" data-delimiter="\t" data-width="100" data-fontsize="13">
+ID  \t DOCULECT        \t CONCEPT \t ENGLISH \t VALUE           \t FORM         \t TOKENS              \t COGIDS
+ 1  \t Baheng, east    \t 七      \t SEVEN   \t tsja³¹,tsjung⁴⁴ \t tsja³¹      \t tɕ a ³¹             \t 3
+ 2  \t Baheng, east    \t 七      \t SEVEN   \t tsja³¹,tsjung⁴⁴ \t tsjung⁴⁴    \t tɕ u ŋ ⁴⁴           \t 3
+ 3  \t Baheng, west    \t 七      \t SEVEN   \t tsjang⁴⁴        \t tsjang⁴⁴    \t tɕ a ŋ ⁴⁴           \t 3
+ 4  \t Qiandong, east  \t 七      \t SEVEN   \t sjung⁵³         \t sjung⁵³     \t ɕ u ŋ ⁵³            \t 3
+ 5  \t Qiandong, wesst \t 七      \t SEVEN   \t sjung²²         \t sjung²²     \t ɕ u ŋ ²²            \t 3
+ 6  \t Baheng, east    \t 月亮    \t MOON    \t la⁰³lha⁵⁵       \t la⁰³lha⁵⁵   \t l a ³/⁰ + ɬ a ⁵⁵    \t 1908 1907
+ 7  \t Baheng, west    \t 月亮    \t MOON    \t ʔa⁰³lha⁵⁵       \t ʔa⁰³lha⁵⁵   \t ʔ a ³/⁰ + ɬ a ⁵⁵    \t 1909 1907
+ 8  \t Qiandong, east  \t 月亮    \t MOON    \t la⁴⁴la⁴⁴        \t la⁴⁴la⁴⁴    \t l a ⁴⁴ + l a ⁴⁴     \t 1908 1907
+ 9  \t Qiandong, wesst \t 月亮    \t MOON    \t pau¹¹la³³       \t pau¹¹la³³   \t p ɔ ¹¹ + l a ³³     \t 1910 1907
+ 10 \t Baheng, east    \t 星星    \t STAR    \t la⁰³qang³⁵      \t la⁰³qang³⁵  \t l a ³/⁰ + q a ŋ ³⁵  \t 1874 1870
+ 11 \t Baheng, west    \t 星星    \t STAR    \t qa⁰³qang³⁵      \t qa⁰³qang³⁵  \t q a ³/⁰ + q a ŋ ³⁵  \t 　1872 1870
+ 12 \t Qiandong, east  \t 星星    \t STAR    \t qei²⁴qei²⁴      \t qei²⁴qei²⁴  \t q ei ²⁴ + q ei  ²⁴  \t 　1872 1870
+ 13 \t Qiandong, wesst \t 星星    \t STAR    \t tei⁴⁴qei⁴⁴      \t tei⁴⁴qei⁴⁴  \t t ei - ⁴⁴ + q ei ⁴⁴ \t 　1871 1870
+
+</div>
+
+<aside class="notes"><p>If we apply this method to our data, we get results that
+look as follows. All words are given cognate IDs by
+the algorithm, depending on how many morphemes
+they have, and if the IDs are identical, this means the
+algorithm judges the words to be cognate.</p>
+</aside></script></section><section data-markdown><script type="text/template"><p style='font-size:30px;'>From cognates to alignments</p>
+
+<p style='text-align:center'>
+<img src="img/partial-alignment.png" style="border:0px;width:800px" alt="img"></img>
+</p>
+
+<aside class="notes"><p>In the third stage, we want to align the cognates we
+detected.</p>
+</aside></script></section><section data-markdown><script type="text/template"><p stlye='30px'>From cognates to alignments</p>
+<p align="middle"><img src='img/alignment.png' style="width:400px;align:middle;border:0px"></img></p>
+
+Phonetic alignment techniques are well-known in historical linguistics and have been applied for quite some time now.
+
+<aside class="notes"><p>Phonetic alignment techniques are well-known in
+historical linguistics and have been applied for quite
+some time now. As the figure shows here, cognate
+words (here all meaning “seven”) are arranged into a
+matrix so that corresponding segments are placed in
+the same column. This is essential to identify sound
+correspondences. Nowadays, we have stable
+algorithms for multiple alignments that yield accuracy
+scores almost comparable to the differences we would
+expect between human annotators only, and we also
+have web-based tools that facilitate manual
+alignments greatly. This picture, for example, is taken
+from the EDICTOR application, and I will show you
+how to work with this tool in the last section. But
+even if this helps to save some time, it is still tedious
+to correct alignments manually.</p>
+</aside></script></section><section data-markdown><script type="text/template">
+<h3>From cognates to alignments</h3>
+
+<p style='font-size:30px;text-align:left;'>We propose <i>Template-Based Alignments</i> as an alternative to semi-automatically computed alignments.</p>
+
+<ul>
+  <li style='font-size:25px'> Languages with a rather restricted syllable structure can usually be aligned in a very consistent way by simply using a template. </li>
+  <li style='font-size:25px'>   A typical Chinese syllable, for example, consists of <i>initial</i>, <i>medial</i>, <i>nucleus</i>, <i>coda</i> and <i>tone</i> (Wang 1996). Once we know the individual template of a Chinese word, we can easily align it with any other word, as long as we know the template.</li>
+</ul>
+
+<aside class="notes"><p>We propose Template-Based Alignments as an
+alternative to semi-automatically computed
+alignments.
+The major idea is, that languages with a rather
+restricted syllable structure can usually be aligned in a
+very consistent way by simply using a template.
+A typical Chinese syllable, for example, consists of
+<em>initial</em>, <em>medial</em>, <em>nucleus</em>, <em>coda</em> and <em>tone</em>
+(Wang 1996). Once we know the individual template
+of a Chinese word, we can easily align it with any
+other word, as long as we know the template.</p>
+</aside></script></section><section data-markdown><script type="text/template">
+<p stlye='fontsize:30px'>From cognates to alignments</p>
+<p align="middle"><img src='img/templates.png' style="width:1000px;align:middle;border:0px"></img></p>
+
+<aside class="notes"><p>Here is an example for this workflow, provided we
+know the template for the words in our data. We start
+from the tokens, and we use the Structure column to
+provide information on the template. Now we use a
+meta-template of the general syllable structure of the
+languages, and then we drop all those columns, where
+we do not find a sound.</p>
+</aside></script></section><section data-markdown><script type="text/template"><p stlye='fontsize:30px'>From cognates to alignments</p>
+
+<p align="middle"><img src='img/orthotemplate.png' style="width:600px;align:middle;"></img></p>
+<aside class="notes"><p>The problem is of course, how to make the templates
+for the words in our data? Here, we can again use
+orthography profiles, along with a variant in which we
+can provide rudimentary context, here expressed by
+the circumflex symbol for the beginning of a word,
+and the dollar sign for the end. We just add another
+column, and in this column we provide the structure,
+the template, for the given sub-sequence. You find
+more information in the handout.</p>
+</aside></script></section><section data-markdown><script type="text/template"><p stlye='fontsize:30px'>From cognates to alignments</p>
+
+<div class="spreadsheet" data-delimiter="\t" data-width="100" data-fontsize="13">
+ID  \t DOCULECT        \t ENGLISH \t TOKENS             \t STRUCTURE \t ALIGNMENT \t COGIDS
+ 1   \t Baheng, east   \t SEVEN   \t tɕ a ³¹             \t i n t     \t tɕ a - ³¹ \t 3
+ 2   \t Baheng, west   \t SEVEN   \t tɕ a ŋ ⁴⁴           \t i n c t   \t tɕ a ŋ ⁴⁴ \t 3
+ 3   \t Qiandong, east \t SEVEN   \t ɕ u ŋ ⁵³            \t i n c t   \t  ɕ u ŋ ⁵³ \t 3
+ 4   \t Qiandong, wesst\t SEVEN   \t ɕ u ŋ ²²            \t i n c t   \t ɕ u ŋ ²²  \t 3
+ 5   \t Baheng, east   \t MOON    \t l a ³/⁰ + ɬ a ⁵⁵    \t i n t + i n t \t l a ³/⁰ + ɬ a ⁵⁵\t 1908 1907
+ 6   \t Baheng, west   \t MOON    \t ʔ a ³/⁰ + ɬ a ⁵⁵    \t i n t + i n t \t ʔ a ³/⁰ + ɬ a ⁵⁵ \t 1909 1907
+ 7   \t Qiandong, east \t MOON    \t l a ⁴⁴ + l a ⁴⁴    \t i n t + i n t \t l a ⁴⁴ + l a ⁴⁴ \t 1908 1907
+ 8   \t Qiandong, wesst\t MOON    \t p ɔ ¹¹ + l a ³³    \t i n t + i n t \t p ɔ ¹¹ + l a ³³ \t 1910 1907
+ 9   \t Baheng, east   \t STAR    \t l a ³/⁰ + q a ŋ ³⁵ \t i n t + i n c t \t l a ³/⁰ + q a ŋ ³⁵ \t 1874 1870
+ 10  \t Baheng, west   \t STAR    \t q a ³/⁰ + q a ŋ ³⁵ \t　i n t + i n c t \t q a ³/⁰ + q a ŋ ³⁵ \t 1872 1870
+ 11  \t Qiandong, east \t STAR    \t q ei ²⁴ + q ei  ²⁴ \t　i n t + i n t \t q ei ²⁴ + q ei - ²⁴ \t  1872 1870
+ 12  \t Qiandong, wesst\t STAR    \t t ei - ⁴⁴ + q ei ⁴⁴\t　i n t + i n t \t t ei - ⁴⁴ + q ei - ⁴⁴\t 1871 1870
+</div>
+
+<aside class="notes"><p>The output file then has two more columns which is
+called “Alignment” and “Structure”.</p>
+</aside></script></section><section data-markdown><script type="text/template"><h3>From alignments to strict, cross-semantic cognates</h3>
+
+<p style='text-align:center'>
+<img src="img/alignment-strict.png" style="width:800px" alt="img"></img>
+</p>
+
+<aside class="notes"><p>We are almost done, we now need to infer the strict
+cross-semantic cognates from the data.</p>
+</aside></script></section><section data-markdown><script type="text/template"><p stlye='fontsize:30px'>From alignments to strict, cross-semantic cognates</p>
+
+* For a realistic analysis, we need to identify cognates not only within the same meaning slot, but across different concepts.
+* However, our algorithm for automatic congate detection designed to search words with the same meaning.
+* Therefore, we need to find *cross-semantic* partial (=normal) cognates in a second stage.
+
+<aside class="notes"><p>For a realistic analysis, we need to identify cognates
+not only within the same meaning slot, but across
+different concepts.
+However, our algorithm for automatic congate
+detection designed to search words with the same
+meaning.
+Therefore, we need to find cross-semantic partial
+(=normal) cognates in a second stage.</p>
+</aside></script></section><section data-markdown><script type="text/template"><p stlye='fontsize:30px'>From alignments to strict, cross-semantic cognates</p>
+
+* For this task, we employ a new algorithm to <i>merge</i> cognates in our data into larger groups.
+* The basic idea is to check if two alignments are compatible with each other, and to fuse them to form a bigger alignment, if this is the case.
+* As a side effect, all words we identify in this way are <i>strictly</i> cognate, since our procedure does not allow to identify a morpheme in the same language to be cognate if this does not show the exact same form.
+
+<aside class="notes"><p>For this task, we employ a new algorithm to merge
+cognates in our data into larger groups.
+The basic idea is to check if two alignments are
+compatible with each other, and to fuse them to form a
+bigger alignment, if this is the case.
+As a side effect, all words we identify in this way are
+strictly cognate, since our procedure does not allow to
+identify a morpheme in the same language to be
+cognate if this does not show the exact same form.</p>
+</aside></script></section><section data-markdown><script type="text/template"><p stlye='fontsize:30px'>From alignments to strict, cross-semantic cognates</p>
+
+<p style='text-align:center'>
+<img src="img/cross-semantic-picture.png" style="width:800px" alt="img"></img>
+</p>
+<aside class="notes"><p>Here are some examples for the morphemes we found
+in the data, which reoccurs in different words.</p>
+</aside></script></section><section data-markdown><script type="text/template"><p stlye='fontsize:30px'>From alignments to strict, cross-semantic cognates</p>
+
+<p style='text-align:center'>
+<img src="img/cross-semantic-table.png" style="width:800px" alt="img"></img>
+</p>
+
+<aside class="notes"><p>Here we give another example to show you how
+actually it is done. I would like to draw your attention
+to the 東黔東 language. The tei²⁴ in Son and tei²⁴ in
+Daughter were not in the same first analysis, in the
+“cognacy” column, but now, after our analysis, in the
+cross-semantic column, the algorithm found them to
+be related, because the word is identical internally,
+and our test with strict alignments accepted
+this.</p>
+</aside></script></section><section data-markdown><script type="text/template"><p stlye='fontsize:30px'>From alignments to strict, cross-semantic cognates</p>
+
+<div class="spreadsheet" data-delimiter="\t" data-width="100" data-fontsize="12">
+ID  \t DOCULECT        \t ENGLISH \t TOKENS             \t STRUCTURE \t ALIGNMENT \t CROSSIDS            \t COGIDS
+ 1   \t Baheng, east   \t SEVEN   \t tɕ a ³¹             \t i n t     \t tɕ a - ³¹ \t 3                  \t 3
+ 2   \t Baheng, west   \t SEVEN   \t tɕ a ŋ ⁴⁴           \t i n c t   \t tɕ a ŋ ⁴⁴ \t 3                  \t 3
+ 3   \t Qiandong, east \t SEVEN   \t ɕ u ŋ ⁵³            \t i n c t   \t  ɕ u ŋ ⁵³ \t 3                  \t 3
+ 4   \t Qiandong, wesst\t SEVEN   \t ɕ u ŋ ²²            \t i n c t   \t ɕ u ŋ ²²  \t 3                  \t 3
+ 5   \t Baheng, east   \t MOON    \t l a ³/⁰ + ɬ a ⁵⁵    \t i n t + i n t \t l a ³/⁰ + ɬ a ⁵⁵\t 1908 351 \t 1908 1907
+ 6   \t Baheng, west   \t MOON    \t ʔ a ³/⁰ + ɬ a ⁵⁵    \t i n t + i n t \t ʔ a ³/⁰ + ɬ a ⁵⁵ \t 41 351	\t 1909 1907
+ 7   \t Qiandong, east \t MOON    \t l a ⁴⁴ + l a ⁴⁴    \t i n t + i n t \t l a ⁴⁴ + l a ⁴⁴ \t 1908 351 \t 1908 1907
+ 8   \t Qiandong, wesst\t MOON    \t p ɔ ¹¹ + l a ³³    \t i n t + i n t \t p ɔ ¹¹ + l a ³³ \t 1910 351  \t 1910 1907
+ 9   \t Baheng, east   \t STAR    \t l a ³/⁰ + q a ŋ ³⁵ \t i n t + i n c t \t l a ³/⁰ + q a ŋ ³⁵ \t 1874 1834 \t 1874 1870
+ 10  \t Baheng, west   \t STAR    \t q a ³/⁰ + q a ŋ ³⁵ \t　i n t + i n c t \t q a ³/⁰ + q a ŋ ³⁵ \t 1872 1834 \t 1872 1870
+ 11  \t Qiandong, east \t STAR    \t q ei ²⁴ + q ei  ²⁴ \t　i n t + i n t \t q ei ²⁴ + q ei - ²⁴ \t  1872 1834 \t 1872 1870
+ 12  \t Qiandong, wesst\t STAR    \t t ei - ⁴⁴ + q ei ⁴⁴\t　i n t + i n t \t t ei - ⁴⁴ + q ei - ⁴⁴\t 1234 1834 \t 1871 1870
+</div>
+<aside class="notes"><p>And this is, how this all looks in our table. You cannot
+see many differences here, but you can see that the
+morphemes in MOON have been added to other sets
+of morphemes, and we generally find a lot of crosssemantic
+cognates in our data.</p>
+</aside></script></section><section data-markdown><script type="text/template"><p style='text-align:center'>
+<img src="img/strict-soundcorrespondence.png" style="width:800px" alt="img"></img>
+</p>
+<aside class="notes"><p>We can now start to search for sound correspondence
+patterns.</p>
+</aside></script></section><section data-markdown><script type="text/template"><h3>From strict cognates to sound correspondence patterns</h3>
+<p style="text-align:center">
+<img src="img/sound-correspondence-classic.png" alt="img" style="width:800px;text-align:center;"></img>
+</p>
+
+<aside class="notes"><p>Most linguists are probably familiar with this kind of
+representation: Clackson shows, how sound
+correspondence patterns are distributed over the Indo-
+European languages.
+But if we look at tables like this one, there are several
+problems. <b>We don’t know the frequency of the
+occurrence of each of the patterns, we do not know
+the number of cognates in each individual
+language, or the context, in which they occur. </b>
+This makes it quite difficult to learn from text-books,
+but also to criticize a theory and to try to improve it.</p>
+</aside></script></section><section data-markdown><script type="text/template"><h3>From strict cognates to sound correspondence patterns</h3>
+<p style="text-align:center">
+<img src="img/ratliff2010.png" alt="img" style="width:600px;text-align:center;"></img>
+</p>
+
+<p style='text-align:center;font-size:60%;'>Ratliff et al. (2010). Hmong-Mien language history. Pacific Linguistics (Page 57)</p>
+
+<aside class="notes"><p>A better example is provided by Martha Ratliff’s
+study on Hmong-Mien in 2010. This table shows us
+the cognate sets she used in the study, so in a way, it’s
+more transparent than the previous example. But there
+are remain some problems:
+(1) the table does not provide the full words in the
+examples, but only the morphemes
+(2) the table does not provide us with information on
+the degree to which patterns are inconsistent,
+reflecting secondary variation in the individual
+languages
+(3) the representation is only to some degree machine-readable,
+not only because it is not digitized, but also
+because we do not know completely to which
+correspondence pattern (or set) each of the other
+sounds in the data belongs, and we will have problems
+to check the consistency of entire words when given
+the data in this form.</p>
+</aside></script></section><section data-markdown><script type="text/template"><h3>From strict cognates to sound correspondence patterns</h3>
+<p style="text-align:center">
+<img src="img/edictor-hn.png" alt="img" style="width:600px;text-align:center;"></img>
+</p>
+
+<aside class="notes"><p>In our proposal for the handling of sound
+correspondence patterns, we propose a different format, and specifically an interactive way of
+inspecting patterns, along with an automatic analysis
+by which the patterns can be inferred in a first place.
+The result of this automatic analysis is like a table, in
+which languages are placed in the columns, and
+correspondence patterns are placed in rows, with each
+cell indicating for each individual correspondence
+pattern, which reflex sound a given language shows
+for this pattern. In this format, everything can be
+traced back to the original data, no data is “missing”
+It’s also interactive, which I will demonstrate soon.</p>
+</aside></script></section><section data-markdown><script type="text/template"><h3>Illustration of the Workflow</h3>
+
+<p> Orthography profiles</p>
+<a style="color:#2d1f23;text-align:center" href='http://calc.digling.org/profile/'> http://calc.digling.org/profile/</a></script></section><section data-markdown><script type="text/template"><h3>Illustration of the Workflow</h3>
+
+<p>EDICTOR: a web-based tool to edit, analyse, and publish etymological data.</p>
+<p style="text-align:center">
+<a style="color:#2d1f23" href='http://edictor.digling.org/' align='middle'><img src='img/edictor.png' width=300px></img></a>
+</p>
+</script></section></section><section ><section data-markdown><script type="text/template">
+<div class='modeling'></div>
 
 <h3>Modeling and annotation</h3>
 <p>Nathanael E. Schweikhard</p>
