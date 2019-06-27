@@ -22,26 +22,241 @@
         <p id='outlook'>OUTLOOK</p>
     </div>
     <div class="reveal">
-      <div class="slides"><section  data-markdown><script type="text/template"><h4>Fundamentals of computer-assisted language comparison</h4>
+      <div class="slides"><section  data-markdown><script type="text/template"><h4>Fundamentals of Computer-Assisted Language Comparison</h4>
 <p><img src='img/calc-yinyang.png' style="border: 0.1;border-color: white;width:25%"></img></p>
 
-<p style='font-size:30px; text-align:center;'>International Conference on Historical Linguistics #24</p>
-<p style='font-size:20px; text-align:center;'>2019.07.03</p></script></section><section ><section data-markdown><script type="text/template"><div class='intro'></div>
+<p style='font-size:30px; text-align:center;'>National Taiwan University</p>
+<p style='font-size:20px; text-align:center;'>2019.06.28</p></script></section><section ><section data-markdown><script type="text/template"><div class='intro'></div>
 
-<h3>Computer-based Linguistics<h3>
+<h3>Introduction<h3>
 
-<p>Tiago Tresoldi</p></script></section><section data-markdown><script type="text/template"><img src='http://lingulist.de/documents/talks/img/calc-project/calc-5.jpg' style='border:0px; width:80%'></img></script></section><section data-markdown><script type="text/template">
-<img src='http://lingulist.de/documents/talks/img/calc-project/calc-7.jpg' style='border:0px; width:80%'></img></script></section></section><section ><section data-markdown><script type="text/template"><div class='methods'></div>
-
-<h3>Methods and algorithms<h3>
-
-<p>Tiago Tresoldi</p>
-</script></section><section data-markdown><script type="text/template"><div class="fig-container" style="overflow:hidden;"
-        data-overflow-shown=true
-        data-file="http://lingpy.org/"
-        data-style="height: 600px; margin-top: -100px; width: 100%;">
+<p>Tiago Tresoldi</p></script></section><section data-markdown><script type="text/template"><h4>Historical linguistics</h4>
+<ul style='font-size:25px'>
+  <li>HL is the general scientific study of linguistic change and evolution
+  in time</li>
+ <li>HL is frequently taken as a synonym for "comparative linguistics",
+  or even for "Indo-European studies" </li>
+ <li> Laymen are more familiar with family trees and proto-forms </li>
+    <ul style='font-size:20px'>
+      <li>English "water", from Proto-Germanic \*watōr, from PIE \*wódr̥ </li>
+      <li>Mandarin 水 shuǐ, from Old Chinese \*lhuiʔ ("that which flows"),
+    from Proto-Sino-Tibetan \*lwi(j) ("flow, stream") </li>
+    <ul>
+</ul>
+<div id = 'rightequal'>
+<img src='img/indoeuropean.png' style='border:0px; width:90%'></img>
 </div>
-</script></section></section><section ><section data-markdown><script type="text/template"><div class='workflows'></div>
+<div id='leftequal'>
+<img src='img/city.png' style='border:0px; width:90%'></img>
+</div></script></section><section data-markdown><script type="text/template"><h4>History of the comparative method</h4>
+<ul style='font-size:30px'>
+  <li>Philosophers in Europe and Asia have debated for millenia how: </li>
+  <ul style='font-size:25px'>
+    <li> Languages show similarities that cannot be explained
+    by chance alone </li>
+    <li> Languages change </li>
+  </ul>
+  <li> As a branch of philology, historical linguistics was born as
+  a "hot" science in the 17th century </li>
+  <ul style='font-size:25px'>
+  <li> Colonial enterprises, e.g. the analyses of Van Boxhorn (1612-1653)
+    and the reconstructions of William Wotton (1713)</li>
+  <li> Religious missions, especially Jesuitic, e.g. Matteo Ricci and
+    Xu Guangqi 徐光啓 (16th-17th century) and Lorenzo Hervás (1735-1809)</li>
+  <li> "Orientalism" as in William Jones' discourse to the Asiatic
+    Society (1786)</li>
+    </ul>
+  </ul></script></section><section data-markdown><script type="text/template"><h4> Comparative method -I </h4>
+
+<p style='font-size:30px'>Mental model of "stair" replaced by that of "tree"</p>
+
+<div id='leftequal'>
+  <img src='img/scalanaturae.jpg' style='border:0px;width:80%'></img>
+</div>
+<div id='rightequal'>
+   <img src='img/tree.gif' style='border:0px;width:100%'></img>
+</div></script></section><section data-markdown><script type="text/template"><h4> Comparative method -II </h4>
+<ul style='font-size:30px'>
+  <li> Progressive influence of Darwin and biological analogies </li>
+
+  <li> German promotion of "Indo-Germanic" studies, leading to the
+  Neogrammarian tenets including: </li>
+  <ul style='font-size:25px'>
+     <li> Regularity of sound changes </li>
+     <li> Immediate and total effect of sound changes </li>
+  </ul>
+</ul></script></section><section data-markdown><script type="text/template"><h4> Traditional workflow </h4>
+<div id='rightequal'>
+<ul style='font-size:30px'>
+  <li> Collection of data </li>
+  <li> Identification of cognates</li>
+  <li> Study of correspondences </li>
+  <li> Reconstruction of sound changes </li>
+  <li> Analysis of typology </li>
+  <li> Correction of errors and repetition </li>
+</ul>
+</div>
+<div id='leftequal'>
+  <img src='img/false_cognates.jpg' style='border:0px;width:150%'></img>
+</div></script></section><section data-markdown><script type="text/template"><h4>Quantitative turn</h4>
+<ul style='font-size:30px'>
+  <li>Statistical approaches have always been common, as in
+  Sapir (1916) </li>
+
+  <li>Computational methods begin in the 1950s with lexicostatistics
+  and glottochronology </li>
+  <ul style='font-size:25px'>
+    <li> Morris Swadesh </li>
+    <li> Joseph Greenberg </li>
+    <li> Sergei Starostin and the Moscow School </li>
+  </ul>
+</ul></script></section><section data-markdown><script type="text/template"><h4> Cladistics and phylogenetics </h4>
+<ul style='font-size:30px'>
+  <li> Computational phylogenetic approaches begin in the early 1990s
+  with works such as Donald Ringe </li>
+
+  <li> Impressive media coverage for Gray & Atkinson (2003)</li>
+  <ul style='font-size:25px'>
+    <li> Initial opposition by many traditional practitioners</li>
+    <li> Progressively more phylogenetic analyses are being published,
+    such as Sagart et al. (2019)</li>
+  </ul>
+</ul></script></section><section data-markdown><script type="text/template"><img src='img/austronesian.jpg' style='border:0px;width:60%;'></img></script></section><section data-markdown><script type="text/template">
+<img src='img/bayesian.png' style='transform:rotate(-90deg);;border:0px;width:60%;margin:0;padding: 0;vertical-align:top;'></img>
+(Sagart, 2019)
+</script></section><section data-markdown><script type="text/template">
+<img src='img/splitstree.png' style='border:0px'></img>
+Cognate data is drawn from (Sagart, 2019)
+</script></section></section><section ><section data-markdown><script type="text/template"><div class='methods'></div>
+
+<h3>Computer-Assisted Language Comparison</h3>
+
+<p>Tiago Tresoldi</p></script></section><section data-markdown><script type="text/template"><h4>Computer-Assisted Language Comparison</h4>
+<p style='font-size:30px'>In the scenario of increasing digital data, open access, and interdisciplinarity, the comparative method must expand:
+<ul style = 'font-size:30px'>
+  <li> Not only major families, but also minority ones </li>
+  <li> Not only small laboratories with closed data, but a global
+    collaboration on "fair" data </li>
+  <li> Avoid "black-boxes", favoring results that help us understand
+    human languages </li>
+  <li> Not only fascination with proto-forms, but collaboration
+    with history, biology, psychology... </li>
+</ul></script></section><section data-markdown><script type="text/template"><h4>Computer-Assisted Language Comparison</h4>
+
+<ul style='font-size:30px'>
+<li>Methods: alignment, cognate detection, correspondence detection</li>
+<li>Tools: LingPy, edictor</li>
+</ul></script></section><section data-markdown><script type="text/template"><h4>LingPy</h4>
+<p> Programming library for historical linguistics, state of the art: </p>
+<ul style='font-size:30px'>
+  <li> multiple phonetic alignment: 98% (pair score, List, 2014) </li>
+  <li> automatic cognate detection: 89% (B-Cubed scores, List et al., 2017)</li>
+  <li> phylogenetic reconstruction: 0.08 (Gen. Quart. Dist, Rama et al., 2018)</li>
+  <li> correspondence pattern identification: NP-hard (no human attempts, List, 2019)</li>
+</ul></script></section><section data-markdown><script type="text/template"><h4>Alignment</h4>
+
+<p style='font-size:30px; text-align:left;'> Given cognates for 水 such as Hakha "tîi", Bunan "tɕʰu",
+Burmish (Rangoon) "je²²", Beijing "ʂuəi²¹⁴", Guangzhou "søy³⁵",
+Jieyang "tsui³¹", Kiranti "ti", rGyalrong (Daofu) "ɣrə",
+how can we align? </p>
+
+<img src='img/alignment-Tiago.png' style='border:0px;width:70%;'></img></script></section><section data-markdown><script type="text/template"><h4> Alignment methods </h4>
+
+Sequence alignment algorithms from bioinformatics such as
+Needleman-Wunsch and Smith-Waterman, implemented in LingPy
+as described in List (2014).</script></section><section data-markdown><script type="text/template"><img src='img/nw_align.png' style='border:0px;width:60%'></img></script></section><section data-markdown><script type="text/template"><h4> Cognate detection </h4>
+
+<p style='font-size:30px;text-align:left;'>A problem of partitioning/clustering based in the correspondence
+of alignment sites according to implied evolutionary models. </p>
+<ul style='font-size:30px'>
+  <li> <i>Edit Distance</i> </li>
+  <ul style='font-size:30px'>
+    <li> <i>Linguistic extensions (Dolgopolsky, SCA)</i> </li>
+  </ul>
+  <li> Flat clustering (hierarchical or graph-based)</li>
+  <li> <i>LexStat</i> </li>
+  <li> Machine learning (PMI similarity, Support Vector Machines)</li>
+</ul></script></section><section data-markdown><script type="text/template"><h4>Edit distance - I</h4>
+
+<p style='font-size:30px;text-align:left;'> Comparing Jieyang "tsui³¹" to Kiranti "ti", there are three
+changes over four alignment positions, thus a score of
+1.0 - (3/4) = 0.75. </p></script></section><section data-markdown><script type="text/template"><table >
+<thead>
+<tr class="header">
+<th>Edits</th>
+<th>Rule</th>
+<th>Alignment</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>0</td>
+<td></td>
+<td>ts</td>
+</tr>
+<tr class="even">
+<td>1</td>
+<td>Delete tone</td>
+<td>ts</td>
+</tr>
+<tr class="odd">
+<td>2</td>
+<td>Delete vowel</td>
+<td>ts</td>
+</tr>
+<tr class="even">
+<td>3</td>
+<td>Change initial</td>
+<td>t</td>
+</tr>
+</tbody>
+</table></script></section><section data-markdown><script type="text/template"><h4>Edit distance -- II</h4>
+
+<ul style='font-size:30px;'>
+  <li>Two words are considered cognates if their edit distance score
+is above a given value (threshold), which can be decided from
+the distribution of pair scores. </li>
+
+  <li> Serious limits in a na"ive approach: Beijing "ʂuəi²¹⁴" and
+Guangzhou "søy³⁵" have a score of 0.0 </li>
+  <ul style='font-size:25px;'>
+     <li> The initial, the medial, the nucleus, the coda, and tone are different</li>
+  </ul>
+</ul></script></section><section data-markdown><script type="text/template"><h4> Extensions to edit distance</h4>
+
+<ul style='font-size:30px;'>
+  <li> Early solutions compared not <i>sounds</i>, but <i>sound classes</i> </li>
+  <ul style='font-size:25px'>
+     <li> In the SCA model, Beijing "ʂuəi²¹⁴" is "SYE06" and
+    Guangzhou "søy³⁵" is "SUY02". </li>
+     <li> Classes can be based on articulatory features or global
+    patterns of sound change. </li>
+     <li> More advanced models involve additional information,
+    such as SCA which incorporates prosodic strings.</li>
+    </ul>
+</ul></script></section><section data-markdown><script type="text/template"><h4> LexStat </h4>
+<ul style='font-size:30px;'>
+ <li>LexStat is an advanced method that emulates the reasoning
+  behind human judgement for cognacy </li>
+
+ <li> The method involves multiple *permutations* that allow to
+  compute individual segment similarities </li>
+  <ul style='font-size:25px;'>
+   <li> The expected similarities allow a specific and instructed
+    alignment, whose score is used for cognacy judgment. </li>
+  </ul>
+</ul></script></section><section data-markdown><script type="text/template"><h4>Correspondences</h4>
+<ul style='font-size:30px;'>
+<li> New network approach for the inference of sound correspondence
+  patterns across multiple languages. </li>
+
+<li> Columns in aligned cognate sets are the nodes, the compatibility
+  between nodes are the edge weights </li>
+  <ul style='font-size:25px;'>
+  <li> Compatible correspondence sets are detected by
+    "minimum clique cover problem" </li>
+  </ul>
+</ul></script></section></section><section ><section data-markdown><script type="text/template"><div class='workflows'></div>
 <h3>CALC workflows</h3>
 <p>Mei-Shin Wu</p></script></section><section data-markdown><script type="text/template"><p style='text-font:25px'>The Gap Between Computational and Traditional Historical Linguistics</p>
 <div class="fig-container" style="overflow:hidden;"
@@ -70,7 +285,7 @@ language families is still rather fuzzy. Especially, some language families in S
 
 <aside class="notes"><p>A computer-assisted strategy has been integrated in many scientific fields. We adapted the idea and develop the computer-assisted framework in historical linguistics. The basic idea behind <b>computer-assisted</b> as opposed to <b>computer-based</b> language comparison is to allow scholars to do qualitative and quantitative research at the same time. By combining the efforts from experts and computing power, we can get the best of two worlds, the efficiency of computers, and the accuracy of humans.</p>
 </aside></script></section><section data-markdown><script type="text/template"><h3>CALC workflow</h3>
-<img src='img/HillList.png'></img>
+<img src='img/HillList.png' style='border:0px'></img>
 
 <aside class="notes"><p>Our workflows for computer-assisted language
 comparison have so far been intensively tested on a
@@ -302,7 +517,7 @@ have the same ID, they are thus meant to be cognate.</p>
 <div class="fig-container" style="overflow:hidden;"
         data-overflow-shown=true
         data-file="http://lingulist.de/documents/talks/img/calc-project/algo2.jpg"
-        data-style="height: 310px; margin-top: -20px; width: 80%;">
+        data-style="height: 310px; margin-top: -20px; width: 80%; border:0px">
 </div>
 
 <p style='text-align:left;font-size:60%;'>List et al. (2016). Using sequence similarity networks to identify partial cognates in multilingual wordlists. In Proceedings of the 54th Annual Meeting of the Association for Computational Linguistics (Vol. 2, pp. 599-605).</p>
@@ -404,7 +619,7 @@ languages, and then we drop all those columns, where
 we do not find a sound.</p>
 </aside></script></section><section data-markdown><script type="text/template"><p stlye='fontsize:30px'>From cognates to alignments</p>
 
-<p align="middle"><img src='img/orthotemplate.png' style="width:600px;align:middle;"></img></p>
+<p align="middle"><img src='img/orthotemplate.png' style="width:600px;align:middle;border:0px"></img></p>
 <aside class="notes"><p>The problem is of course, how to make the templates
 for the words in our data? Here, we can again use
 orthography profiles, along with a variant in which we
@@ -437,7 +652,7 @@ called “Alignment” and “Structure”.</p>
 </aside></script></section><section data-markdown><script type="text/template"><h3>From alignments to strict, cross-semantic cognates</h3>
 
 <p style='text-align:center'>
-<img src="img/alignment-strict.png" style="width:800px" alt="img"></img>
+<img src="img/alignment-strict.png" style="width:800px;border:0px" alt="img"></img>
 </p>
 
 <aside class="notes"><p>We are almost done, we now need to infer the strict
@@ -474,14 +689,14 @@ cognate if this does not show the exact same form.</p>
 </aside></script></section><section data-markdown><script type="text/template"><p stlye='fontsize:30px'>From alignments to strict, cross-semantic cognates</p>
 
 <p style='text-align:center'>
-<img src="img/cross-semantic-picture.png" style="width:800px" alt="img"></img>
+<img src="img/cross-semantic-picture.png" style="width:800px;border:0px" alt="img"></img>
 </p>
 <aside class="notes"><p>Here are some examples for the morphemes we found
 in the data, which reoccurs in different words.</p>
 </aside></script></section><section data-markdown><script type="text/template"><p stlye='fontsize:30px'>From alignments to strict, cross-semantic cognates</p>
 
 <p style='text-align:center'>
-<img src="img/cross-semantic-table.png" style="width:800px" alt="img"></img>
+<img src="img/cross-semantic-table.png" style="width:800px;border:0px" alt="img"></img>
 </p>
 
 <aside class="notes"><p>Here we give another example to show you how
@@ -516,13 +731,13 @@ morphemes in MOON have been added to other sets
 of morphemes, and we generally find a lot of crosssemantic
 cognates in our data.</p>
 </aside></script></section><section data-markdown><script type="text/template"><p style='text-align:center'>
-<img src="img/strict-soundcorrespondence.png" style="width:800px" alt="img"></img>
+<img src="img/strict-soundcorrespondence.png" style="width:800px;border:0px" alt="img"></img>
 </p>
 <aside class="notes"><p>We can now start to search for sound correspondence
 patterns.</p>
 </aside></script></section><section data-markdown><script type="text/template"><h3>From strict cognates to sound correspondence patterns</h3>
 <p style="text-align:center">
-<img src="img/sound-correspondence-classic.png" alt="img" style="width:800px;text-align:center;"></img>
+<img src="img/sound-correspondence-classic.png" alt="img" style="width:800px;text-align:center;border:0px"></img>
 </p>
 
 <aside class="notes"><p>Most linguists are probably familiar with this kind of
@@ -538,7 +753,7 @@ This makes it quite difficult to learn from text-books,
 but also to criticize a theory and to try to improve it.</p>
 </aside></script></section><section data-markdown><script type="text/template"><h3>From strict cognates to sound correspondence patterns</h3>
 <p style="text-align:center">
-<img src="img/ratliff2010.png" alt="img" style="width:600px;text-align:center;"></img>
+<img src="img/ratliff2010.png" alt="img" style="width:600px;text-align:center;border:0px"></img>
 </p>
 
 <p style='text-align:center;font-size:60%;'>Ratliff et al. (2010). Hmong-Mien language history. Pacific Linguistics (Page 57)</p>
@@ -563,7 +778,7 @@ to check the consistency of entire words when given
 the data in this form.</p>
 </aside></script></section><section data-markdown><script type="text/template"><h3>From strict cognates to sound correspondence patterns</h3>
 <p style="text-align:center">
-<img src="img/edictor-hn.png" alt="img" style="width:600px;text-align:center;"></img>
+<img src="img/edictor-hn.png" alt="img" style="width:600px;text-align:center;border:0px"></img>
 </p>
 
 <aside class="notes"><p>In our proposal for the handling of sound
@@ -585,27 +800,169 @@ It’s also interactive, which I will demonstrate soon.</p>
 
 <p>EDICTOR: a web-based tool to edit, analyse, and publish etymological data.</p>
 <p style="text-align:center">
-<a style="color:#2d1f23" href='http://edictor.digling.org/' align='middle'><img src='img/edictor.png' width=300px></img></a>
+<a style="color:#2d1f23" href='http://edictor.digling.org/' align='middle'><img src='img/edictor.png' style='border:0px;width:300px'></img></a>
 </p>
 </script></section></section><section ><section data-markdown><script type="text/template">
 <div class='modeling'></div>
 
 <h3>Modeling and annotation</h3>
 <p>Nathanael E. Schweikhard</p>
-</script></section><section data-markdown><script type="text/template"><h3>Concepticon - unified concepts</h3>
+</script></section><section data-markdown><script type="text/template"><h4>Example of an Annotated Wordlist</h4>
+<img src='img/Example_of_an_Annotated_Wordlist.png' style='border:0px;width:100%;'></img>
+
+<aside class="notes"><p>This is a wordlist prepared in the table format mentioned before.
+It shows word forms from several Sino-Tibetan languages.
+(go through table)</p>
+</aside></script></section><section data-markdown><script type="text/template"><h4>Cross-Links to Reference Catalogs: Glottolog</h4>
+<img src='img/Cross_Links_to_Reference_Catalogs.png' style='border:0px;width:80%;'></img>
+
+<aside class="notes"><p>In order to facilitate the comparability between this dataset and other datasets, we use cross-links to reference catalogs.
+In the column marked red here we specify the language to link it to an entry in Glottolog if it is included in Glottlog. Glottolog is a reference database of languages which includes a bibliography and information on the genealogic relationship. Different linguists might use different names to refer to the same language, and so Glottolog can be used to specify which language it is one is referring to.</p>
+</aside></script></section><section data-markdown><script type="text/template"><h4>Glottolog</h4>
+<div class="fig-container" style="overflow:hidden;"
+        data-overflow-shown=true
+        data-file="https://glottolog.org/resource/languoid/id/indo1319"
+        data-style="height: 550px; margin-top: -65px; width: 100%;">
+</div>
+<p style='font-size:20px;'>Glottolog, a reference database of languages and their genealogical relations (Hammarström et al. 2019). </p>
+</script></section><section data-markdown><script type="text/template"><h4>Cross-Links to Reference Catalogs: Concepticon</h4>
+<img src='img/Cross_Links_to_Reference_Catalogs_concepticon.png' style='border:0px;width:80%;'></img>
+
+<aside class="notes"><p>In this column we specify the concept, or meaning, which is denoted by the word form in question. Also this is cross-linked to a reference catalog, which is called Concepticon, if the concept in question is included in Concepticon. Concepticon serves to disambiguate between different concepts for which the same elicitation gloss might be used. For example, if a wordlist includes the concept bark, one may not immediately see whether it refers to the bark of a tree, or to the sound made by a dog. If the latter is meant, it would be linked to the concepticon entry seen here.</p>
+</aside></script></section><section data-markdown><script type="text/template"><h4>Concepticon</h4>
 
 <div class="fig-container" style="overflow:hidden;"
         data-overflow-shown=true
-        data-file="https://concepticon.clld.org/"
-        data-style="height: 620px; margin-top: -100px; width: 100%;"></script></section></section><section ><section data-markdown><script type="text/template"><div class='outlook'></div>
-<img src='img/outlook.png'></img>
-</script></section><section data-markdown><script type="text/template"><ul>
-  <li>Increasing the accuracy</li>
-  <li>More user-friendly</li>
+        data-file="https://concepticon.clld.org/parameters/1206"
+        data-style="height: 550px; margin-top: -65px; width: 100%;">
+        </div>
+<p style='font-size:20px;'>The concept ’barking’ in the Concepticon database (List et al. 2019).</p></script></section><section data-markdown><script type="text/template"><h4>A Morpheme-Segmented Wordlist</h4>
+<img src='img/A_Morpheme-Segmented_Wordlist.png' style='border:0px;width:80%;'></img>
+
+<aside class="notes"><p>In the column segments you can see the word forms segmented by spaces into their phonemes, and by plus symbols into their morphemes. Thereby this additional information is added to the data, making it possible to use it for studies relating to the phonology and morphology.</p>
+</aside></script></section><section data-markdown><script type="text/template"><h4>Compositionality</h4>
+<ul style='font-size:30px'>
+<li>Compositionality is a basic feature of human language (Zeige 2015).
+Language consists of re-combinable elements.</li>
+<li>This entails an unlimited amount of expressions from a limited
+amount of elements.</li>
+<li>Different words may therefore share some of their morphemes.</li>
+<li>With morpheme annotation we can study the structure of the lexicon
+and even language history.</li>
 </ul>
-</script></section></section><section  data-markdown><script type="text/template"><div></div>
-<h3>Thank you for the attention!</h3>
-</script></section></div>
+
+<aside class="notes"><p>What is the advantage of having wordlists with information on morpheme borders? Compositionality is a basic feature of human language. It means that languages consist of elements, like phonemes or morphemes, that can be re-combined to form new words or sentences. Therefore, from a limited amount of elements, an unlimited amount of expressions can be formed. And words related to each other by word formation may share some of their morphemes. Therefore, we can study the structure of the lexicon of a language, and even its history, by investigating its morphemes and thereby its word families.</p>
+</aside></script></section><section data-markdown><script type="text/template"><h4>Automated Morpheme Segmentation</h4>
+<ul style='font-size:30px'>
+<li>Morphemes (List 2019)</li>
+<ul style='font-size:25px'>
+  <li>are recurring combinations of form and meaning</li>
+  <li>and abstraction of relations within the lexicon</li>
+  <li>which reflect language history</li>
+  <li>and are often bound to phonotactic restrictions</li>
+  <li>while being sometimes marked orthographically
+(space, dash, different character).</li>
+</ul>
+<li>Many approaches search only for recurring letter strings.</li>
+<li>The quality of an approach depends on language and amount of data.</li>
+<li>There is no standard for testing new methods.</li>
+<li>Morpheme-segmented wordlists could be used for testing purposes.</li>
+</ul>
+
+<aside class="notes"><p>But why would we need to annotate morpheme information in a word list? There are some automated approaches to automatically detect morpheme borders in language data. However, there are some problems with these approaches.
+By morphemes we here mean recurring combinations of form and meaning within a language that reflect relations between words in the lexicon that are a result of language change in the form of word formation. Besides these formal and semantic aspects that define morphemes, there often are also interrelations between them and other aspects of language. For example, many languages have phonotactic restrictions on how a morpheme can be shaped. And at least in some cases, the border between morphemes is marked orthographically, for example with a space or a dash or by using a different character for each morpheme, like in Chinese.
+Nevertheless, most approaches to automated morpheme detection only search for recurring letter strings, so they only take the form side, or part thereof, into account, but not the orthographic rules, the semantic side or the phonotactic rules. Therefore they need huge amounts of training data to deliver good results.
+Because of this, the quality of these methods depends on both the language and the amount of data available. But with less well studied languages we might not have enough language material for these automated methods.
+Additionally, there is no standard way of testing the cross-linguistic quality of these methods. This is were computer-assisted morpheme segmentation shows its benefits. Not only is it more reliable if an expert adds morphological annotation than if it&#39;s done by an untested algorithm. But it also can be more easily shared and reused by other linguists. And we could use morpheme-segmented wordlists like the one I just showed you as a standard against which we could test the quality of automated morpheme detection algorithms.</p>
+</aside></script></section><section data-markdown><script type="text/template"><h4>Glossed morphemes</h4>
+
+<img src='img/Glossed_morphemes.png' style='border:0px;width:80%;'></img>
+
+<aside class="notes"><p>Here you again see an excerpt from a morpheme-segmented wordlist, this time with some German data. But additionally, also glosses have been added. For each morpheme, a gloss in the column called morphemes here specifies its basic meaning. Thereby, morphemes recurring in several words can be given the same gloss, and homophone morphemes can be disambiguated by giving them different glosses.
+(example)
+Since wordlists include semantic information about the word forms, these glosses can even be automatically derived from the meaning of the word forms and then corrected by an expert, making it much less effort for the expert than writing the glosses from scratch. Instead of glosses, also IDs can be used to annotate which morphemes are recurring in which words.
+However, this kind of annotation, with all its benefits, can only be used for some kinds of word formation, and therefore show only some kinds of relations between words in a language.</p>
+</aside></script></section><section data-markdown><script type="text/template"><h4>Word Formation</h4>
+
+<img src='img/Word_Formation.png' style='border:0px;width:80%;'></img>
+<aside class="notes"><p>Here you see an overview of the different kinds of word formation.
+Morpheme segmentation can only be used to annotate concatenative word formation processes fully, but there are problems if other kinds of word formation are involved.
+Therefore we are devising an annotation framework that is not limited to only concatenative word formation. As an example I will show you some word formation processes in Indo-European that involve both suffixation and ablaut, the latter of which is a pattern-based word formation type in which the vowel in a morpheme changes or is removed.</p>
+</aside></script></section><section data-markdown><script type="text/template"><h4>Word Formation in Indo-European</h4>
+<img src='img/Word_Formation_in_IE.png' style='border:0px;width:80%;'></img>
+<p style='font-size:20px;'>A family tree of *h₂ei-u-* (based on Wodtko et al. 2008 and Mallory/Adams 2006)</p>
+
+<aside class="notes"><p>Here you see an excerpt of the word family of the stem h₂ei-u. At the top you see the reconstructed Indo-European words, on the bottom you see the words how they are attested in historical languages.
+(explain derivations, mention regular sound change relationship to attested forms, forms with the same colour only differ by regularsound change).</p>
+</aside></script></section><section data-markdown><script type="text/template"><h4>Annotation of Word Formation Process I </h4>
+<div id='leftelarge'>
+<img src='img/Word_Formation_Process_I-1.png' style='border:0px;width:150%;'></img>
+</div>
+<div id='rightsmall'>
+<img src='img/Word_Formation_Process_I-2.png' style='border:0px;width:100%;'></img>
+</div>
+
+<aside class="notes"><p>Since the stem vowel differs between the forms, it would not be possible to annotate the exact relationships just by plus-symbols and glosses in an easy manner.
+Therefore we have extended our format and added an additional column and a second table.</p>
+</aside></script></section><section data-markdown><script type="text/template"><h4>Annotation of Word Formation Processes II</h4>
+<img src='img/Annotation_of_Word_Formation_Processes_II.png' style='border:0px;width:80%'></img>
+
+<aside class="notes"><p>The first table here shows the information of this word family in our morpheme annotation framework. (explain table) Instead of glosses, we here just used the forms of the morphemes themselves, and the segments column isn‘t shown. Since this is a multi-lingual dataset, the morphemes column and the IDs in the column cognates are used to provide the information which parts of the word forms only differ from each other via regular sound change. (give examples) In other words, by this we annotate the concatenative aspects of word formation. But in the right-most column, roots, we use the same ID for morphemes that originally go back to the same morpheme but differ also by non-concatenative types of word formation. (give examples)</p>
+</aside></script></section><section data-markdown><script type="text/template"><h4>Annotation of Word Formation Processes III</h4>
+<img src='img/Annotation_of_Word_Formation_Processes_III.png' style='border:0px;width:80%'></img>
+
+<aside class="notes"><p>And this second table the exact relation between words is specified. Non-concatinative word formation works not on the morpheme level but on the level of the whole word. Therefore, for specifying the changes, the relation between whole words are annotated. But also concatenative word formation can be annotated in this manner. (explain examples) We are still working on a way to convert this annotation into a format that can be understood by the computer. Once that is done, it should be possible to semi-automatically create this second table.
+In this example we assumed that all the word formation processes in the forms in question already happened in the reconstructed proto-language. However, even though it is not unlikely in this case, we do not for sure. Let me explain that with an example.</p>
+</aside></script></section><section data-markdown><script type="text/template"><h4>Modelling Language History I</h4>
+<img src='img/Modelling_Language_History_I.png' style='border:0px;width:100%'></img>
+
+<aside class="notes"><p>Here we have three words from the table, two of which only differ by regular sound change. The other one is derived from that stem with a suffix and a vowel change. One possible option for the history of these words is that both stems already existed in the proto-language. The derived form was lost in Vedic and Avestan or their common ancestor, the other form was lost in Greek.</p>
+</aside></script></section><section data-markdown><script type="text/template"><h4>Modelling Language History II</h4>
+<img src='img/Modelling_Language_History_II.png' style='border:0px;width:100%'></img>
+
+<aside class="notes"><p>Another possibility, which admittedly seems a bit less likely, would be that only the suffixed form existed in Indo-European, and that the other form was derived either from it or from some other member of this word family by a process of backformation in the common ancestor of Vedic and Avestan.</p>
+</aside></script></section><section data-markdown><script type="text/template"><h4>Modelling Language History III</h4>
+<img src='img/Modelling_Language_History_III.png' style='border:0px;width:100%'></img>
+
+<aside class="notes"><p>And a third possibility is that only the form found in Vedic and Avestand existed in the proto-language and that the derived form was created in Greek.
+All three of these options of course include the possibility that both forms existed alongside each other for a while.</p>
+</aside></script></section><section data-markdown><script type="text/template"><h4>Modelling Language History IV</h4>
+<p style='font-size:35px;text-align:left;'>By annotating word formation in a machine-readable manner, we will
+ultimately be able to compare different hypotheses of the language history
+and calculate their probability.</p>
+
+<aside class="notes"><p>From this single example on its own we cannot really tell which of these histories is the correct one. If we however provide a computer with data on many word families, we can simulate different hypotheses and compare them in order to calculate their respective probability.</p>
+</aside></script></section></section><section ><section data-markdown><script type="text/template"><div class='outlook'></div>
+<img src='img/outlook.png'></img></script></section><section data-markdown><script type="text/template"><h3>Summary</h3>
+The computer-assisted approach can help linguists to
+<ul>
+<li>collaborate, </li>
+<li>handle big data,</li>
+<li>test models and theories, and</li>
+<li>integrate traditional and modern methods and insights with each
+other.</li>
+</ul>
+
+<aside class="notes"><p>These are just some examples in which ways the computer-assisted approach can help linguists to  collaborate, handle big data, test models and theories, and integrate traditional and modern methods and insights with each other.</p>
+</aside></script></section><section data-markdown><script type="text/template">The tools we introduced were
+
+<div class="fig-container" style="overflow:hidden;"
+        data-overflow-shown=true
+        data-file="http://calc.digling.org"
+        data-style="height: 550px; margin-top: -65px; width: 100%;">
+        </div>
+</script></section><section data-markdown><script type="text/template"><div></div>
+<h3>Thank you for your attention!</h3>
+<p style='text-align:left;'>CALC members:</p>
+<ul>
+  <li> Dr. Johann-Mattis List (Group leader)  </li>
+  <li> Dr. Yunfan Lai (Post-Doc) </li>
+  <li> Dr. Tiago Tresoldi (Post-Doc) </li>
+  <li> Mei-Shin Wu (Doctorate student) </li>
+  <li> Nathanael E. Schweikhard (Doctorate student) </li>
+</ul>
+<p> Contact: http://calc.digling.org/ </p>
+</script></section></section></div>
 
       <footer id="footer">
         <p>Tiago Tresoldi | Mei-Shin Wu | Nathanael E. Schweikhard</p>
